@@ -1,0 +1,913 @@
+
+  
+  /*메인컨테이너*/
+  .mainContainer {
+    position: relative;
+    left: 22rem;
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - 22rem);
+    min-width: 80.4rem;
+    height: 100%;
+    min-height: 100vh;
+  }
+  
+  .mainContentsContainer {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 6rem);
+    height: auto;
+    min-height: calc(100vh - 12rem);
+    padding: 3rem;
+    padding-top: 2rem;
+  }
+
+
+  
+  /*테이블 헤드*/
+  .tableList {
+    height: 63rem;
+    width: 100%;
+    height: auto;
+    border-spacing: 0;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.16);
+  }
+  
+
+  
+  .tableListHeadTr th {
+    font-size: 1.6rem;
+    text-align: center;
+    background-color: #444444;
+    color: white;
+    padding: 10px;
+  }
+  
+
+  
+  .tableListHeadTrTd {
+    
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .tableList tbody tr td {
+    height: 4rem;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  
+  .tableList td, .tableList th {
+    border: 1px solid #D2D2D2;
+    padding: 8px;
+  }
+  
+  .popupAreaBoxBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.6rem;
+    padding: 0 1.2rem;
+    border-radius: 0.2rem;
+    border: none;
+    background-color: #444444;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox" i] {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+  }
+  
+  .tableContainer {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 20.6rem);
+  }
+  
+  /* 팝업 스타일 */
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20000;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.16);
+  }
+  .documentPopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20000;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.16);
+  }
+  
+  .popupTitle {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    padding-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .popupTitleTextFirst{
+    font-size: 2.1rem;
+  }
+  .popupTitleTextSecond{
+    font-size: 2.7rem;
+    font-weight: bold;
+  }
+  
+ hr {
+  margin-left: 2rem;
+  width: 98%;
+  color: black;
+  }
+
+  .popupContent {
+    background-color: #fefefe;
+    margin-top: 2%;
+    margin-left: 25%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100.9rem;
+    height: 85rem;
+  }
+  /* .updatePopupContent {
+    background-color: #fefefe;
+    margin-top: 2%;
+    margin-left: 25%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100.9rem;
+    height: 85rem;
+  } */
+  .maintenancePopupTitle {
+    padding: 2rem;
+    padding-top: 2.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .maintenancePopupContent {
+    background-color: #fefefe;
+    margin-top: 7rem;
+    margin-left: 25%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 101rem;
+    height: 80.1rem;
+  }
+  .maintenanceSalary{
+    padding-left: 2rem;
+    width: 100%;
+    height: 30%;
+  }
+  .maintenanceSalary span{
+    font-size: 2.5rem;
+  }
+  .maintenanceDetails{
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    width: 100%;
+    height: 70%;
+  }
+  .maintenanceDetails span{
+    font-size: 2.5rem;
+  }
+  .maintenanceFilter input[type="month"]{
+    padding: 0;
+    padding-left: 1rem;
+    width: 16rem;
+    height: 2.8rem;
+    border-radius: 0.6rem;
+    border: 1px solid #575757;
+    border-bottom: 1px solid black;
+  }
+  .maintenanceFilter select{
+    padding-left: 1rem;
+    width: 16rem;
+    height: 3rem;
+    border-radius: 0.6rem;
+    border: 1px solid #575757;
+  }
+  .scrollableTable {
+    width: 97%;
+    height: 35rem; /* 원하는 높이로 설정하세요 */
+    overflow-y: scroll; /* 세로 스크롤바 활성화 */
+    border: 1px solid #575757;
+  }
+  .maintenanceDetailTable{
+    overflow-y: auto;
+    margin-top: 2rem;
+    padding: 0;
+    font-size: 1.6rem;
+    width: 97%;
+    height: 28rem;
+ 
+    border-spacing: 0;
+  }
+  .maintenanceDetailTable thead tr td{
+    text-align: center;
+    height: 4.9rem;
+    border-bottom: 1px solid black;
+    padding: 0;
+  }
+  .maintenanceDetailTable tbody{
+    font-size: 1.4rem;
+    border-top: 1px solid black;
+  }
+  .maintenanceDetailTable tbody tr td{
+    height: 4.5rem;
+    text-align: center;
+  }
+
+  .articleBox{
+    display: flex;
+  }
+  .articleBox span{
+    font-size: 2.2rem;
+    color: #575757;
+  }
+  .articleBoxSalary{
+    border-radius: 0.6rem;
+    margin-left: 4rem;
+    padding-left: 1rem;
+    width: 20.4rem;
+    height: 3.1rem;
+    line-height: 3.1rem;
+    border: 1px solid #575757;
+    text-align: left;
+  }
+  .articleBoxSalary span{
+    font-size: 1.4rem;
+    color: #575757;
+  }
+  .salaryBox{
+    margin-top: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    width: 97%;
+    height: 8.7rem;
+    border: 1px solid #575757;
+    display: flex;
+}
+  
+  .documentPopupContent {
+    padding-left: 2rem;
+    background-color: #fefefe;
+    margin-top: 2%;
+    margin-left: 25%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 101rem;
+    height: 80rem;
+  }
+  
+  .popupSection {
+    max-height: 70rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 8.8rem;
+    padding: 1.5rem 0;
+    box-sizing: border-box;
+  }
+  
+  .popupArticleBox {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 1rem;
+    margin-bottom: 4.5rem;
+  }
+  
+  .popupArticleDouble {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: calc(33.3% - 2rem);
+    height: 2.8rem;
+  }
+  .informationPopupArticleDouble {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .vehicleNumBox {
+    margin-right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 21.5rem;
+  }
+  
+  .vehicleNumBox :last-child {
+    margin-left: 1rem;
+  }
+  
+  .popupArticleLabel {
+    margin-left: 2rem;
+    color: #575757;
+    width: 10rem;
+    text-align: left;
+    font-size: 1.6rem;
+  }
+  
+  .popupArticleInputTwice {
+    
+    width: 8.9rem;
+    height: 3.1rem;
+    border: 0.1rem solid #575757;
+    border-radius: 0.5rem;
+    outline: none;
+  }
+  
+  .popupArticleInput {
+    width: 21.2rem;
+    height: 3.1rem;
+    border: 0.1rem solid #575757;
+    border-radius: 0.5rem;
+
+  }
+
+  .popupArticleBoxTwo, .popupArticleBoxOne {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .popupArticleBoxOne {
+    justify-content: space-between;
+  }
+  
+  .popup input[type=radio] {
+    margin-right: 0.8rem;
+    margin-top: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  .popup input[type=radio]:nth-child(2){
+    margin-left: 6rem;
+  }
+  
+  .popupArticleBox input[type="text"],
+  .popupArticleBox input[type="date"]{
+    padding: 0;
+  }
+  .trueFalse {
+    color: #575757;
+    justify-content: center;
+    display: flex;
+    font-size: 2rem;
+    text-align: center;
+}
+  
+  .aloneTrueFalse {
+    width: 40%;
+    justify-content: space-between;
+  }
+  .informationAloneTrueFalse {
+    width: 60%;
+    justify-content: space-between;
+  }
+  
+  .popupArticleDoubleSecond {
+    margin-left: 3.1rem;
+  }
+  
+  .closeCreate {
+    position: absolute;
+    left: 148rem;
+    top: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .close {
+    height: 4.2rem;
+    border-radius: 24.7rem;
+    background-color: #ffffff;
+    width: 11.6rem;
+    font-size: 2rem;
+    margin-left: 1rem;
+    color: #000000;
+    border: 1px solid black;
+  }
+  
+  .close:hover, .close:focus {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .mainContents {
+    display: flex;
+  }
+  
+  .graphContainer {
+    width: 5%;
+    padding: 2rem;
+    padding-right: 0;
+    padding-top: 2rem;
+  }
+  
+  .graphMoveButton {
+    border: none;
+    background-color: white;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0rem 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+  }
+  
+  .graphMoveArrow {
+    color: white;
+    font-size: 3rem;
+    background-color: #444444;
+    border-radius: 50%;
+    width: 3rem;
+  }
+  
+  table thead tr th:nth-child(1) {
+    border-radius: 0.6rem 0 0 0;
+  }
+  table thead tr th:last-child{
+    border-radius:  0 0.6rem 0 0;
+  }
+  table thead tr th:nth-child(1) { width: 3%; } /*체크박스*/
+  table thead tr th:nth-child(2) { width: 4%; } /* 순번 */
+  table thead tr th:nth-child(3) { width: 5%; } /* 순번 */
+  table thead tr th:nth-child(4) { width: 7.5%; } /*차량번호*/
+  table thead tr th:nth-child(5) { width: 6%; }  /*담당기사*/
+  table thead tr th:nth-child(6) { width: 6%; } /* 제조사*/
+  table thead tr th:nth-child(7) { width: 6.5%; }  /* 승차인원 */
+  table thead tr th:nth-child(8) { width: 6.5%; }  /* 연식*/
+  table thead tr th:nth-child(9) { width: 6.5%; }  /* 정비내역*/
+  table thead tr th:nth-child(10) { width: 6.5%; }  /* 보험납부일자*/
+  table thead tr th:nth-child(11) { width: 6.5%; } /* 보험금*/
+  table thead tr th:nth-child(12) { width: 6.5%; } /* 상세정보*/
+  table thead tr th:nth-child(13) { width: 6.5%; } /* 차량서류*/
+  .filterContainer {
+    padding: 1rem;
+    padding-left: 0;
+    display: flex;
+  }
+  
+  .filterOrder {
+    width: 16.7rem;
+    height: 4rem;
+    align-items: center;
+    background-color: #9D9D9D;
+    border: none;
+    border-radius: 0.6rem;
+    color:  white;
+    font-size: 2.0rem;
+  }
+  
+  .filterNew {
+    width: 16.7rem;
+    height: 4rem;
+    margin-left: 1rem;
+    background-color: #9D9D9D;
+    border: none;
+    border-radius: 0.6rem;
+    color:  white;
+    font-size: 2.0rem;
+  }
+  .filterNew:hover, .filterOrder:hover{
+    background-color: #444444;
+  }
+  
+  .delete {
+    font-size: 2rem;
+    color: white;
+    background-color: #444444;
+    width: 10.2rem;
+    height: 4.0rem;
+    border-radius: 0.6rem;
+    border: none;
+  }
+  
+
+  .closeComplete {
+    position: absolute;
+    left: 109rem;
+    top: 28rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .documentComplete {
+    background-color: #4000a8;
+    font-size: 2.5rem;
+    color: #ffffff;
+    border: 0;
+    border-radius: 2.4rem;
+    margin-left: 1rem;
+    height: 4.2rem;
+    width: 11.6rem;
+  }
+  .documentPopupArticleDouble {
+    margin-left: 4.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 2.8rem;
+}
+.documentPopupSection{
+  margin-top: 2.8rem;
+}
+.documentPopupArticleBox{
+  flex-direction: column;
+  gap: 2.6rem;
+}
+.documentPopupArticleInput{
+  border: 1px solid black;
+  width: 31.9rem;
+}
+.fileUploadWrapper {
+  font-weight: 500;
+  font-size: 1.6rem;
+  height: 3.1rem;
+  border: 1.5px solid #575757;
+  display: flex;
+  align-items: center;
+  width: 27rem;
+  border-radius: 0.5rem;
+}
+
+.fileUploadInput {
+  display: none;
+}
+
+.fileUploadLabel {
+  font-weight: bold;
+  flex: 1;
+  padding-left: 1rem;
+  color: #0000EE;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fileUploadButton {
+  background-color: #575757;
+    color: white;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 100%;
+    width: 6.9rem;
+}
+
+.fileUploadButton:hover {
+  background-color: #404040;
+}
+
+
+.paging{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 1.4rem;
+  width: 40rem;
+  height: 2.5rem;
+  color: #7D7D7D;
+  gap: 1rem;
+}
+.btnAreaBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 6.4rem;
+}
+.pageItem{
+  
+  font-size: 1.6rem;
+}
+.pagePre{
+  font-weight: bold;
+  margin-right: 3rem;
+}
+.pageNext{
+  margin-left: 3rem;
+  font-weight: bold;
+}
+.pageLink{
+  margin-right: 1rem;
+}
+.btnBox {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 21.5rem;
+  height: 2.5rem;
+  transform: translate(0, -50%);
+}
+.btnBox input {
+  background-color: #444444;
+  outline: none;
+  box-sizing: border-box;
+  text-align: center;
+}
+.btnModules {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 7.13rem;
+  height: 3.1rem;
+  padding: 0 1.2rem;
+  border: none;
+  border-radius: 0.2rem;
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+}
+ /*X자*/
+ .X-close {
+  position: relative;
+  width: 3.5rem;
+  height: 3.7rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+.line {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: black;
+  top: 50%;
+  transform-origin: center;
+}
+.line1 {
+  transform: rotate(45deg);
+}
+.line2 {
+  transform: rotate(-45deg);
+}
+
+/*차량상세*/
+.vehicleInformation{
+  padding-left: 2rem;
+  width: 97%;
+  height: 38.1rem;
+  display: flex;
+  flex-direction: column;
+}
+.vehicleInformation span,
+.vehicleSalary span,
+.vehicleOption span,
+.vehicleNote span,
+.documentCreate span,
+.documentDetail span
+{
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  
+}
+.vehicleInformationSection{
+  display: flex;
+  justify-content: space-between;
+  width: 97%;
+  height: 90%;
+  border: 1px solid #575757;
+  border-radius: 0.6rem;
+}
+.firstArticleArea,
+.secondArticleArea{
+  padding: 3rem;
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.informationPopupArticleLabel {
+  margin-left: 2rem;
+  color: #575757;
+  width: 15rem;
+  text-align: left;
+  font-size: 1.6rem;
+}
+.vehicleSalary{
+  padding-left: 2rem;
+  width: 97%;
+  height: 38.1rem;
+  display: flex;
+  flex-direction: column;
+}
+.vehicleOption{
+  margin-top: 2rem;
+  padding-left: 2rem;
+  width: 97%;
+  height: 20.4rem;
+  display: flex;
+  flex-direction: column;
+}
+.vehicleOptionSection{
+  display: flex;
+  justify-content: space-between;
+  width: 97%;
+  height: 90%;
+  border: 1px solid #575757;
+  border-radius: 0.6rem;
+}
+.popupArticleTrueFalse{
+  display: flex;
+}
+.trueFalse span{
+  font-size: 1.6rem;
+}
+.optionPopupArticleDouble{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 2.8rem;
+}
+.trueFalse input[type=radio]{
+  margin-right: 0.8rem;
+    margin-top: 0.5rem;
+    width: 2rem;
+    height: 1.5rem;
+}
+.vehicleOptionLabel{
+  text-align: center;
+}
+.vehicleTrueFalse{
+  width: 20rem;
+  justify-content: space-between;
+}
+
+.popupArticleTrueFalse{
+  display: flex;
+  flex-direction: row;
+}
+.optionFirstArticleArea, .optionSecondArticleArea{
+  width: 50%;
+
+  padding-top: 1.5rem;
+}
+.vehicleNote{
+  margin-top: 2rem;
+  padding-left: 2rem;
+  width: 97%;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  
+}
+.vehicleNoteSection{
+  width: 95%;
+  height: 90%;
+  border: 1px solid #575757;
+  border-radius: 0.6rem;
+  text-align: left;
+  vertical-align: top;
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: #575757;
+}
+.vehicleUpdate, .vehicleCreate{
+  margin-top:4rem;
+  height: auto;
+  padding: 0 5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.vehicleUpdateButton, .vehicleCreateButton{
+  width: 12.4rem;
+  height: 3.2rem;
+  background-color: #4000A8;
+  border: 1px solid #575757;
+  color: white;
+  border-radius: 0.6rem;
+}
+.documentCreate{
+  width: 98rem;
+  height: 17.9rem;
+  padding-left: 2rem;
+}
+.documentCreateSection{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  width: 100%;
+  height: 85%;
+  border: 1px solid #575757;
+  border-radius: 0.6rem;
+}
+.documentSection{
+  padding: 0;
+}
+.documentFile{
+  margin-left: 0;
+}
+.SecondDocumentFile{
+  padding-left: 0;
+}
+.documentDetail{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 5rem;
+  padding-left: 2rem;
+}
+.documentDetailContentSection{
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+    width: 98%;
+    height: 25.8rem;
+    border: 1px solid #575757;
+    border-radius: 0.6rem;
+}
+.documentDetailButton{
+  font-size: 1.4rem;
+  color: #575757;
+}
+.documentDetailButton{
+  display: flex;
+  gap: 1.3rem;
+}
+.detailButton{
+  background-color: white;
+  border-radius: 0.6rem;
+  border: 1px solid #575757;
+  height: 2.9rem;
+  width: 17%;
+}
+.detailButton:hover{
+  background-color: #575757;
+  color: white;
+}
+
+.documentSaveButton{
+  width: 12.64rem;
+  height: 3.2rem;
+  background-color: #4000A8;
+  border-radius: 0.6rem;
+}
+.documentSave{
+  margin-top: 2rem;
+  padding-right: 1.8rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.documentSaveButton span{
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+}
+.documentDetailContent{
+  margin-bottom: 1rem;
+  display: flex;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.6rem;
+
+  margin-left: 2rem;
+  height: 4.4rem;
+  width: 96%;
+  background-color: rgba(0, 0, 0, 20%);
+}
+.carNumber{
+  margin-left: 20rem;
+}
+.date{
+  margin-left: 2rem;
+}
+
+.documentDetailContentSection > div {
+  display: none;
+}

@@ -1,0 +1,10 @@
+.mainContentsContainer{
+    width: 80%;
+}
+.move{
+    width: 20%;
+    background-color: black;
+}
+.mainContent{
+    display: flex;
+}

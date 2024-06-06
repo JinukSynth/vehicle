@@ -1,0 +1,40 @@
+{% load static %}
+<table class="tableList">
+    <thead>
+      <tr class="tableListHeadTr">
+        <th><input type="checkbox" class="amountCheckAll"></th>
+        <th>순번</th>
+        <th>사용여부</th>
+        <th>차량번호</th>
+        <th>담당기사</th>
+        <th>제조사</th>
+        <th>승차인원</th>
+        <th>연식</th>
+        <th>정비내역</th>
+        <th>보험납부일자</th>
+        <th>보험금</th>
+        <th>상세정보</th>
+        <th>차량서류</th>
+
+      </tr>
+    </thead>
+    <tbody id="vehicle-table-body">
+        {% for vehicle in vehicles %}
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ vehicle.usage_status|default:"NULL" }}</td>
+            <td>{{ vehicle.license_number_0|default:"NULL" }} {{ vehicle.license_number_1|default:"NULL" }}</td>
+            <td>{{ vehicle.driver|default:"NULL" }}</td>
+            <td>{{ vehicle.manufacturer|default:"NULL" }}</td>
+            <td>{{ vehicle.passenger_capacity|default:"NULL" }}</td>
+            <td>{{ vehicle.model_year|default:"NULL" }}</td>
+            <td onclick="openMaintenancePopup()">{{ vehicle.detail_info }}</td>
+            <td>{{ vehicle.insurance_payment_date|default:"NULL" }}</td>
+            <td>{{ vehicle.insurance_cost|default:"NULL" }}</td>
+            <td onclick="openUpdatePopup()">{{ vehicle.detail_info }}</td>
+            <td onclick="openDocumentPopup()">{{ vehicle.get_total_documents }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>

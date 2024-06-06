@@ -1,0 +1,27 @@
+{% load static %}
+<div class="headerTitle">
+    차량관리
+  </div>
+  <div class="profile">
+    <span class="userName">관리자</span>
+    <div>
+      <span>님</span>
+      <img src="{% static 'vehicles/images/profileArrow.png' %}" alt="아래 화살표 아이콘"/>
+    </div>
+  </div>
+  <div class="profileBox" style="display: none">
+    <div class="profileMenuCell">
+      <img src="{% static 'images/createUserIcon.png' %}" alt="설정 아이콘"/>
+      <span class="profileMenuName">아이디 변경</span>
+    </div>
+    <div class="profileMenuCell">
+      <img src="{% static 'vehicles/images/passwordIcon.png' %}" alt="비밀번호 변경"/>
+      <span class="profileMenuName">비밀번호 변경</span>
+    </div>
+    <div class="profileMenuCell">
+      <a href="/member/logout">
+        <img src="{% static 'vehicels/images/logoutIcon.png'%}" alt="로그아웃"/>
+        <span class="profileMenuName">로그아웃</span>
+      </a>
+    </div>
+  </div>

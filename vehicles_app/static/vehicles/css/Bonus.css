@@ -1,0 +1,250 @@
+.searchContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 6.6rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    border-radius: 0.2rem;
+    box-shadow: 0rem 0.1rem 0.4rem rgb(0 0 0 / 30%);
+    background-color: white;
+    box-sizing: border-box;
+  }
+  .searchForm {
+    padding-left: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  }
+  .searchFormLabel{
+  font-size: 1.4rem;
+  margin-right: 2rem;
+  }
+  .searchForm input[type=month]{
+  width: 12rem;
+  margin-right: 2rem;
+  }
+  
+  .searchFormInput{
+  width: 18rem;
+  height: 2.6rem;
+  padding-left: 1rem;
+  box-sizing: border-box;
+  border: 0.1rem solid #D2D2D2;
+  border-radius: 0.2rem;
+  outline: none;
+  font-family: "Noto Sans CJK KR";
+  font-size: 1.4rem;
+  }
+  
+  .searchFormSearchBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.6rem;
+  margin-left: 2rem;
+  padding: 0 1.8rem;
+  border : none;
+  border-radius: 0.2rem;
+  font-size: 1.4rem;
+  color: white;
+  background-color: #444444;
+  cursor: pointer;
+  }
+
+  .tableList{
+    width: 100%;
+    height: auto;
+    border-spacing: 0;
+    }
+    .tableListSuperHeadTr th {
+    text-align: center;
+    background-color: #444444; /* 상위 헤더의 배경색 */
+    color: white; /* 글자색 */
+    padding: 10px; /* 패딩 */
+    }
+    
+    .tableListHeadTr th {
+    text-align: center;
+    background-color: #444444; /* 하위 헤더의 배경색 */
+    color: white; /* 글자색 */
+    padding: 10px; /* 패딩 */
+    }
+    .tableListHeadTr{
+    width: 2rem;
+    height: 2.5rem;
+    background-color: #444444;
+    color: white;
+    }
+    
+    .tableListHeadTrTd{
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    }
+    
+    .tableList {
+    font-size: 1.4rem;
+    border-collapse: collapse;
+    }
+    .tableList tbody tr td {
+    text-align: center;
+    }
+    
+    
+    .tableList td, .tableList th {
+    border: 1px solid #D2D2D2; 
+    padding: 8px; 
+    }
+    input[type="checkbox" i] {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+    }
+.tableListHeadTrTd:nth-child(1){
+    width: 5%;
+}
+.tableListHeadTrTd:nth-child(2){
+    width: 7%;
+}
+.tableListHeadTrTd:nth-child(3){
+    width: 10%;
+}
+.tableListHeadTrTd:nth-child(4){
+    width: 8%;
+}
+.tableListHeadTrTd:nth-child(5){
+    width: 10%;
+}
+.tableListHeadTrTd:nth-child(6){
+    width: 5%;
+}
+.tableListHeadTrTd:nth-child(7){
+    width: 7%;
+}
+.tableListHeadTrTd:nth-child(8){
+    width: 8%;
+}
+.tableListHeadTrTd:nth-child(9){
+    width: 8%;
+}
+.tableListHeadTrTd:nth-child(10){
+    width: 8%;
+}
+.tableListHeadTrTd:nth-child(11){
+    width: 10%;
+    
+}    
+tbody tr td:last-child {
+    color: red;
+    font-size: 1.4rem;
+}
+
+/*팝업*/
+  .explainPopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20000;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.16);
+  }
+  
+  .popupTitle {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .popupTitleTextFirst{
+    font-size: 2.1rem;
+  }
+  .popupTitleTextSecond{
+    font-size: 2.7rem;
+    font-weight: bold;
+  }
+  
+  .popupTitle hr {
+    margin-top: 2rem;
+    width: 100%;
+    color: black;
+  }
+  
+  .popupContent {
+    background-color: #fefefe;
+    margin-top: 7rem;
+    margin-left: 18.4rem;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 152.1rem;
+    height: 80.7rem;
+  }
+  .explainPopupContent {
+    background-color: #fefefe;
+    margin-top: 17rem;
+    margin-left: 70rem;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 62rem;
+    height: 51.5rem;
+  }
+  
+  .popupSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 8.8rem;
+    padding: 1.5rem 0;
+    box-sizing: border-box;
+  }
+  .bonusExplainbutton{
+    font-size: 1.4rem;
+    position: absolute;
+    margin-top: 9.5rem;
+    margin-left: 170rem;
+    background-color: #0069D9;
+    border: none;
+    color: white;
+    width: 15rem;
+    height: 4rem;
+  }
+  /*X자*/
+  .X-close {
+    position: relative;
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+  }
+  .line {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    top: 50%;
+    transform-origin: center;
+  }
+  .line1 {
+    transform: rotate(45deg);
+  }
+  .line2 {
+    transform: rotate(-45deg);
+  }
+  /*끝*/
+  .explain {
+    font-size: 1.6rem
+  }
+  .explain li {
+    margin-bottom: 2rem;
+  }

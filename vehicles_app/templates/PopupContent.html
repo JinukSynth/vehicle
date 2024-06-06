@@ -1,0 +1,277 @@
+<div class="popupContent">
+          
+  <div class="popupTitle">
+    <span class="popupTitleTextFirst">차량관리 &nbsp; <span class="popupTitleTextSecond">차량등록</span></span>
+    <div class="X-close" onclick="closeCreatePopup()">
+      <div class="line line1"></div>
+      <div class="line line2"></div>
+    </div>
+  </div>
+
+  <hr>
+  
+  <div class="popupSection">
+
+    <div class="vehicleInformation">
+      <span>차량정보</span>
+      <div class="vehicleInformationSection">
+        
+        <!--첫번째 줄-->
+        <div class="firstArticleArea">
+
+          <div class="informationPopupArticleDouble vehicleNum">
+            <label for="vehicleNum" class="informationPopupArticleLabel">차량번호</label>
+            <div class="vehicleNumBox">
+                <input type="text" name="license_number_0" id="vehicleNum" placeholder="경기00아" class="popupArticleInputTwice">
+                <input type="text" name="license_number_1" id="vehicleNum" placeholder="0000" class="popupArticleInputTwice">
+            </div>
+          </div>
+
+          <div class="informationPopupArticleDouble">
+            <label for="vehicleName" class="informationPopupArticleLabel">차량종류</label>
+            <select id="vehicleName" name="vehicle_type" class="popupArticleInput popupArticleInputSelect">
+              <option value="">뉴카운티</option>
+              <option value="">뉴그랜버드</option>
+              <option value="">유니버스</option>
+              <option value="">유니버스-노블</option>
+              <option value="">유니버스-프라임</option>
+              <option value="">유니버스-실크로드</option>
+            </select>
+          </div>
+
+          <div class="informationPopupArticleDouble">
+            <label for="driverName" class="informationPopupArticleLabel">담당기사</label>
+            <select type="text" id="driverName" name="driver" class="popupArticleInput popupArticleInputSelect">
+                <option value="김원탁">김원탁</option>
+                <option value="정진욱">정진욱</option>
+                <option value="남소정">남소정</option>
+            </select>
+          </div>
+
+          <div class="informationPopupArticleDouble">
+            <label for="passengerNum" class="informationPopupArticleLabel">승차인원</label>
+            <select type="text" id="passengerNum" name="passenger_capacity" class="popupArticleInput popupArticleInputSelect" placeholder="00">
+              <option value="17">17</option>
+              <option value="25">25</option>
+              <option value="29">29</option>
+              <option value="33">33</option>
+              <option value="43">43</option>
+              <option value="47">47</option>
+            </select>
+          </div>
+
+          <div class="informationPopupArticleDouble">
+            <label for="modelYear" class="informationPopupArticleLabel">모델연도</label>
+            <select id="modelYear" name="model_year" class="popupArticleInput popupArticleInputSelect" placeholder="00">
+              <option value="2013">2013</option>
+              <option value="2014">2014</option>
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+            </select>
+          </div>
+
+          <div class="informationPopupArticleDouble">
+            <label for="inspectionDate" class="informationPopupArticleLabel">정기점검일</label>
+            <input type="date" name="inspection_date" id="inspectionDate" class="popupArticleInput" placeholder="00">
+          </div>
+
+
+        </div>
+        <!--첫번째줄 끝-->
+
+        <!--두번째 줄-->
+        <div class="secondArticleArea">
+          <div class="informationPopupArticleDouble">
+            <label for="manufacturer" class="informationPopupArticleLabel">제조사</label>
+            <select id="manufacturer" name="manufacturer" class="popupArticleInput popupArticleInputSelect">
+              <option value="hyendai">현대</option>
+              <option value="kia">기아</option>
+            </select>
+          </div>
+          <div class="informationPopupArticleDouble">
+            <label for="inspectionDate" class="informationPopupArticleLabel">출고일자(연도)</label>
+            <input type="date" id="inspectionDate" name="release_date" class="popupArticleInput">
+          </div>
+          <div class="informationPopupArticleDouble">
+            <label for="inspectionDate" class="informationPopupArticleLabel">차대번호</label>
+            <input type="text" class="popupArticleInput" name="chassis_number" placeholder="00">
+          </div>
+          <div class="informationPopupArticleDouble">
+            <label for="inspectionDate" class="informationPopupArticleLabel">형식</label>
+            <input type="text" class="popupArticleInput" name="type" placeholder="00">
+          </div>
+          <div class="informationPopupArticleDouble">
+            <label for="inspectionDate" class="informationPopupArticleLabel">원동기형식</label>
+            <input type="text" name="engine_type" class="popupArticleInput" placeholder="00">
+          </div>
+          <div class="informationPopupArticleDouble">
+            <label for="usageStatus" class="informationPopupArticleLabel">사용여부</label>
+            <div class="trueFalse informationAloneTrueFalse">
+              <div>
+                <input type="radio" name="usage_status " id="useYes" value="True">사용
+              </div>
+              <div>
+                <input type="radio" name="usage_status " id="useNo" value="False">미사용
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--두번째 줄 끝-->
+      </div>
+    </div>
+  
+    <div class="vehicleSalary">
+      <span>차량정보</span>
+      <div class="vehicleInformationSection">
+        <div class="firstArticleArea">
+
+          <div class="informationPopupArticleDouble">
+            <label for="vehicleName" class="informationPopupArticleLabel">차량가격</label>
+            <input type="text" name="vehicle_price" class="popupArticleInput">
+          </div>
+
+          <div class="informationPopupArticleDouble">
+            <label for="vehicleName" class="informationPopupArticleLabel">번호판가격</label>
+            <input type="text" name="plate_price" class="popupArticleInput">
+          </div>
+
+          <div class="informationPopupArticleDouble">
+            <label for="driverName" class="informationPopupArticleLabel">보험납부일</label>
+            <input type="date" name="insurance_payment_date" class="popupArticleInput">
+          </div>
+
+          <div class="informationPopupArticleDouble">
+            <label for="passengerNum" class="informationPopupArticleLabel">보험비</label>
+            <input type="text" name="insurance_cost" class="popupArticleInput">
+          </div>
+
+          <div class="informationPopupArticleDouble">
+            <label for="modelYear" class="informationPopupArticleLabel">할부금액(월)</label>
+            <input type="text" name="installment_cost" class="popupArticleInput">
+          </div>
+
+          <div class="informationPopupArticleDouble">
+            <label for="inspectionDate" class="informationPopupArticleLabel">남은 할부액</label>
+            <input type="text" name = "remaining_installment" class="popupArticleInput">
+          </div>
+
+
+        </div>
+        <div class="secondArticleArea">
+          <div class="informationPopupArticleDouble">
+            <label for="inspectionDate" class="informationPopupArticleLabel">감가상각(월)</label>
+            <input type="text" class="popupArticleInput">
+          </div>
+          <div class="informationPopupArticleDouble">
+            <label for="inspectionDate" class="informationPopupArticleLabel">감가상각기준(년)</label>
+            <input type="text" class="popupArticleInput">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vehicleOption">
+      <span>차량 옵션</span>
+      <div class="vehicleOptionSection">
+
+        <div class="firstArticleArea optionFirstArticleArea">
+            <div class="optionPopupArticleDouble popupArticleTrueFalse">
+                <div class="popupArticleLabel vehicleOptionLabel">전광판유무</div>
+                <div class="trueFalse vehicleTrueFalse">  
+                  <div class="optionYes">
+                    <input type="radio" name="led_display" id="LedYes" value="True"><span>있음</span>
+                  </div>
+                  <div class="optionNo">
+                    <input type="radio" name="led_display" id="LedNo" value="False"><span>없음</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="optionPopupArticleDouble popupArticleTrueFalse">
+                <div class="popupArticleLabel vehicleOptionLabel">노래방유무</div>
+                <div class="trueFalse vehicleTrueFalse">  
+                  <div class="optionYes">
+                    <input type="radio" name="karaoke" id="SingYes" value="True"><span>있음</span>
+                  </div>
+                  <div class="optionNo">
+                    <input type="radio" name="karaoke" id="SingNo" value="False"><span>없음</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="optionPopupArticleDouble popupArticleTrueFalse">
+              <div class="popupArticleLabel vehicleOptionLabel">온수기유무</div>
+              <div class="trueFalse vehicleTrueFalse">  
+                <div class="optionYes">
+                  <input type="radio" name="hot_water_heater" id="HotYes" value="True"><span>있음</span>
+                </div>
+                <div class="optionNo">
+                  <input type="radio" name="hot_water_heater" id="HotNo" value="False"><span>없음</span>
+                </div>
+              </div>
+              </div>
+        </div>
+
+        <div class="secondArticleArea optionSecondArticleArea">
+
+          <div class="optionPopupArticleDouble popupArticleTrueFalse">
+            <div class="popupArticleLabel vehicleOptionLabel">냉장고 유무</div>
+            <div class="trueFalse vehicleTrueFalse">  
+              <div class="optionYes">
+                <input type="radio" name="refrigerator" id="refrigeratorYes" value="True"><span>있음</span>
+              </div>
+              <div class="optionNo">
+                <input type="radio" name="refrigerator" id="refrigeratorNo" True="False"><span>없음</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="optionPopupArticleDouble popupArticleTrueFalse">
+            <div class="popupArticleLabel vehicleOptionLabel">USB</div>
+            <div class="trueFalse vehicleTrueFalse">  
+              <div class="optionYes">
+                <input type="radio" name="usb" id="USBYes" value="True"><span>있음</span>
+              </div>
+              <div class="optionNo">
+                <input type="radio" name="usb" id="USBNo" value="False"><span>없음</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="optionPopupArticleDouble popupArticleTrueFalse">
+          <div class="popupArticleLabel vehicleOptionLabel">TV</div>
+          <div class="trueFalse vehicleTrueFalse">  
+            <div class="optionYes">
+              <input type="radio" name="tv" id="TVYes" value="True"><span>있음</span>
+            </div>
+            <div class="optionNo">
+              <input type="radio" name="tv" id="TVNo" value="False"><span>없음</span>
+            </div>
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="vehicleNote">
+      <span>비고</span>
+      <textarea style="resize: none;" name="notes" cols="30" rows="10" class="vehicleNoteSection"></textarea>
+    </div>
+
+    <div class="vehicleCreate"> 
+      <button type="submit" class="vehicleCreateButton" onclick="submitVehicleForm()">
+      <span>{{ action }}</span>
+      </button>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,126 @@
+<div class="documentPopupContent">
+    <div class="popupTitle">
+      <span class="popupTitleTextFirst">차량관리 &nbsp<span class="popupTitleTextSecond">차량서류</span></span>
+      <div class="X-close" onclick="closeDocumentPopup()">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+      </div>
+    </div>
+    <hr>
+
+    <div class="documentPopupSection">
+
+      <div class="documentCreate">
+        <span>서류 등록</span>
+        <div class="documentCreateSection documentSection">
+          <div class="firstArticleArea">
+              <div class="popupArticleBox documentPopupArticleBox">
+              <div class="documentPopupArticleDouble documentFile">
+                <label for="vehiclePrice" class="popupArticleLabel">차량등록증</label>
+                <div class="fileUploadWrapper">
+                  <label for="vehicleRegistration" class="fileUploadLabel" id="fileUploadLabel">파일이름.jpg</label>
+                  <input type="file" id="vehicleRegistration" class="fileUploadInput" onchange="updateFileName(this)">
+                  <div class="fileUploadButton" onclick="document.getElementById('vehicleRegistration').click()">파일선택</div>
+                </div>
+              </div>
+              </div>
+              <div class="popupArticleBox documentPopupArticleBox">
+              <div class="documentPopupArticleDouble documentFile">
+                <label for="vehiclePrice" class="popupArticleLabel">차량보험</label>
+                <div class="fileUploadWrapper">
+                  <label for="vehicleRegistration" class="fileUploadLabel" id="fileUploadLabel">파일이름.jpg</label>
+                  <input type="file" id="vehicleRegistration" class="fileUploadInput" onchange="updateFileName(this)">
+                  <div class="fileUploadButton" onclick="document.getElementById('vehicleRegistration').click()">파일선택</div>
+                </div>
+              </div>
+              </div>
+          </div>
+          <div class="secondArticleArea SecondDocumentFile">
+            <div class="popupArticleBox documentPopupArticleBox">
+              <div class="documentPopupArticleDouble documentFile">
+                <label for="vehiclePrice" class="popupArticleLabel">자동차기능<br>종합진단서</label>
+                <div class="fileUploadWrapper">
+                  <label for="vehicleRegistration" class="fileUploadLabel" id="fileUploadLabel">파일이름.jpg</label>
+                  <input type="file" id="vehicleRegistration" class="fileUploadInput" onchange="updateFileName(this)">
+                  <div class="fileUploadButton" onclick="document.getElementById('vehicleRegistration').click()">파일선택</div>
+                </div>
+              </div>
+              </div>
+            <div class="popupArticleBox documentPopupArticleBox">
+                <div class="documentPopupArticleDouble documentFile">
+                  <label for="vehiclePrice" class="popupArticleLabel ">차량할부</label>
+                  <div class="fileUploadWrapper">
+                    <label for="vehicleRegistration" class="fileUploadLabel" id="fileUploadLabel">파일이름.jpg</label>
+                    <input type="file" id="vehicleRegistration" class="fileUploadInput" onchange="updateFileName(this)">
+                    <div class="fileUploadButton" onclick="document.getElementById('vehicleRegistration').click()">파일선택</div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="documentDetail">
+        <span>서류 상세</span>
+        <div class="documentDetailButton">
+          <button class="detailButton" data-target="detailvehicleCreateDocument">차량등록증</button>
+          <button class="detailButton" data-target="detailInsurance">차량보험</button>
+          <button class="detailButton" data-target="detailCertificate">자동차기능종합진단서</button>
+          <button class="detailButton" data-target="detailInstallment">차량할부</button>
+          <button class="detailButton" data-target="detailDocument">외부점검</button>
+        </div>
+        
+        <div class="documentDetailContentSection">
+
+          <div id="detailvehicleCreateDocument" class="classfication">
+            <div class="documentDetailContent">
+                <span class="date">2024-04-02</span>
+                <span class="carNumber">7105번 차량등록증</span>
+            </div>
+            <div class="documentDetailContent"></div>
+          </div>
+
+          <div id="detailInsurance" class="classfication">
+            <div class="documentDetailContent">
+                <span class="date">2024-04-02</span>
+                <span class="carNumber">차량보험</span>
+            </div>
+            <div class="documentDetailContent"></div>
+          </div>
+
+          <div id="detailCertificate" class="classfication">
+            <div class="documentDetailContent">
+                <span class="date">2024-04-02</span>
+                <span class="carNumber">자동차기능종합진단서</span>
+            </div>
+            <div class="documentDetailContent"></div>
+          </div>
+
+          <div id="detailInstallment" class="classfication">
+            <div class="documentDetailContent">
+                <span class="date">2024-04-02</span>
+                <span class="carNumber">차량할부</span>
+            </div>
+            <div class="documentDetailContent"></div>
+          </div>
+
+          <div id="detailDocument" class="classfication">
+            <div class="documentDetailContent">
+                <span class="date">2024-04-02</span>
+                <span class="carNumber">외부 점검 서류</span>
+            </div>
+            <div class="documentDetailContent"></div>
+          </div>
+
+        </div>
+
+        
+        <div class="documentSave">
+          <button class="documentSaveButton"><span>저장</span></button>
+        </div>
+
+      </div>
+
+    </div>
+      
+  </div>

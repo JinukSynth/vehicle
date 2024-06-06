@@ -1,0 +1,115 @@
+  /*검색 CSS*/
+  .searchContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5.8rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    border-radius: 1.7rem;
+    box-shadow: 0rem 0.1rem 0.4rem rgb(0 0 0 / 30%);
+    background-color: white;
+    box-sizing: border-box;
+  }
+  
+  .searchForm {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    gap: 1.2rem;
+  }
+  
+  .searchFormLabel {
+    font-size: 1.4rem;
+    margin-right: 2rem;
+  }
+  
+  .searchForm input[type=textarea] {
+    width: 37.1rem;
+    font-size: 1.5rem;
+    height: 3.9rem;
+    border: 1px solid #444444;
+    padding: 0;
+    padding-left: 1.5rem;
+    border-radius: 0.6rem;
+  }
+  .searchType{
+    width: 16rem;
+    height: 3.9rem;
+    border-radius: 0.6rem;
+    border: 1px solid #444444;
+    padding-left: 1rem;
+  }
+  .searchFormInput {
+    width: 18rem;
+    height: 2.6rem;
+    padding-left: 1rem;
+    box-sizing: border-box;
+    border: 0.1rem solid #D2D2D2;
+    border-radius: 0.2rem;
+    outline: none;
+    font-family: "Noto Sans CJK KR";
+    font-size: 1.4rem;
+  }
+  
+  .searchFormSearchBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.6rem;
+    padding: 0 1.8rem;
+    border: none;
+    border-radius: 0.6rem;
+    font-size: 1.6rem;
+    color: white;
+    background-color: #444444;
+    cursor: pointer;
+  }
+  
+  .searchVehicleNum {
+    width: 37.2rem;
+  }
+
+
+.searchForm *{
+  height: 4.1rem;
+}
+.today{
+  font-size: 1.6rem;
+    border-radius: 0.6rem;
+    border: none;
+    color: white;
+    background-color: #444444;
+    width: 6.8rem;
+}
+.yesterdayTomorrow{
+  text-align: center;
+    color: white;
+    font-size: 3rem;
+    background-color: #A4A4A4;
+    border: none;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.headerFlex{
+  display: flex;
+}
+.headerBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 3.8rem;
+  border-radius: 0.6rem;
+  background-color: #444444;
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+.addPeople {
+  background-color: #0069D9;
+}

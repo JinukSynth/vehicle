@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'vehicles/css/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'vehicles/css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'vehicles/css/main-container.css' %}" />
+    <link rel="stylesheet" href="{% static 'vehicles/css/search.css' %}" />
+    <link rel="stylesheet" href="{% static 'vehicles/css/sidemenu.css' %} " />
+    <link rel="stylesheet" href="{% static 'vehicles/css/MainPage_Vehicle.css' %}" />
+    <link rel="stylesheet" href="{% static 'vehicles/css/Bonus.css' %}" />
+    <link rel="stylesheet" href="{% static 'vehicles/css/Complaint.css' %}" />
+
+    <title>DEV</title>
+  </head>
+  
+  <body>
+    <div class="trp">
+      
+      <!--sidemenu-->
+      <div class="sideMenu">
+        {% include 'sidebar.html' %}
+      </div> 
+      
+      <!-- mainContainer -->
+      <div class="mainContainer">
+          
+        <!-- mainContainer header -->
+        <div class="header">
+          {% include  'header.html' %}
+        </div>
+          
+        <!-- Contents -->
+        <div class="mainContents">
+          
+          <!-- move to graphPage -->
+          <div class="graphContainer">
+            <button class="graphMoveButton" type="button">
+              <span class="graphMoveArrow"></span>
+            </button>
+          </div>
+            
+          <!-- mainContentsContainer -->
+          <div class="mainContentsContainer">
+            <!-- search information in vehicle_table -->
+            <div class="searchContainer">
+              {% include 'searchContainer.html' %}
+            </div>
+              
+            <!-- filter for vehicle_table -->
+            <div class="filterContainer">
+              <button class="filterOrder">오래된 차량 순</button>
+              <button class="filterOrder filterNew">최신 차량 순</button>
+              <div class="deleteCreate"></div>
+            </div>
+              
+            <!-- vehicle table -->
+            <div class="tableContainer">  
+              {% include 'vehicle_table.html' %}
+            </div>
+
+
+
+            <!--  move section for vehicle_table -->
+            <div class="btnAreaBox">
+              <div class="paging">
+                <div class="pageItem pagePre">
+                  <a href="pageLink">이전</a>
+                </div>
+                <div class="pageItem">
+                  <a href="pageLink">1</a>
+                </div>
+                <div class="pageItem">
+                  <a href="pageLink">2</a>
+                </div>
+                <div class="pageItem">
+                  <a href="pageLink">3</a>
+                </div>
+                <div class="pageItem">
+                  <a href="pageLink">4</a>
+                </div>
+                <div class="pageItem pageNext">
+                  <a href="pageLink">다음</a>
+                </div>
+              </div>
+              <div class="btnBox">
+                <input autocomplete="off" type="submit" value="삭제" class="btnModules">
+              </div>
+                <!-- move section for vehicle_table done -->
+            </div>
+            
+          </div>
+          <!-- main content container done -->
+        </div>
+        <!-- main content done -->
+      </div>
+      <!-- mainContainer done-->
+
+      <!-- Popup Screen -->
+      <!-- add vehicle popup -->
+      <div id="createPopup" class="popup" style="display:none;">
+        <form id="vehicleForm" method="post" enctype="multipart/form-data" action="{% url 'vehicle_create' %}">
+            {% csrf_token %}
+            {% include 'PopupContent.html' with action="등록" %}
+        </form>
+      </div>
+      
+      <!-- vehicle maintence popup -->
+      <div id="maintenancePopup" class="popup">
+        {% include 'maintence_Popup.html' %}
+      </div>
+
+      <!-- detail to vehicle popup -->
+      <div id="updatePopup" class="popup">
+        {% csrf_token %}
+        {% include 'PopupContent.html' with action="수정" %}
+      </div>
+        
+      <!-- document vehicle popup -->
+      <div id="documentPopup" class="documentPopup">
+        {% include 'document_Popup.html' %}
+      </div>
+      
+    </div>
+    <!-- Trp done -->
+    
+    <!-- js area -->
+    <script src="{% static 'vehicles/js/documentDetail.js' %}"></script>
+    <script src="{% static 'vehicles/js/createPopup.js' %}"></script>
+    <script src="{% static 'vehicles/js/global.js' %}"></script>
+    <script src="{% static 'vehicles/js/sidebar.js' %}"></script>
+    <script src="{% static 'vehicles/js/documentInput.js' %}"></script>
+
+  </body>
+</html>
